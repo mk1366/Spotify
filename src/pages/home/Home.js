@@ -6,6 +6,10 @@ import styled from 'styled-components';
 import api from '../../api';
 import AlbumItem from '../../components/AlbumItem';
 
+const Container = styled.div`
+   padding: 20px;
+`;
+
 const Input = styled.input`
    height: 40px;
    padding: 0;
@@ -15,6 +19,13 @@ const Input = styled.input`
    padding-right: 20px;
    border: 1px solid gray;
    border-radius: 40px;
+`;
+
+const Albums = styled.div`
+   margin-top: 20px;
+   display: inline-flex;
+   flex-wrap: wrap;
+   gap: 20px;
 `;
 
 function Home() {
@@ -37,7 +48,7 @@ function Home() {
     }, [term]);
 
    return (
-      <div>
+      <Container>
          <Input
             type="text"
             placeholder="Search albums"
@@ -46,12 +57,12 @@ function Home() {
                setTerm(e.target.value);
             }}
          />
-         <div>
+         <Albums>
             {albums.map(e => {
                return <AlbumItem data={e} />
             })}
-         </div>
-      </div>
+         </Albums>
+      </Container>
    )
 }
 export default Home;

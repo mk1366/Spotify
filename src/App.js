@@ -12,7 +12,7 @@ import CallbackPage from './pages/callback/Callback';
 export default function App() {
   return (
     <Router>
-      <div>
+      {/* <div>
         <Switch>
           <Route path="/login">
             <LoginPage />
@@ -24,7 +24,8 @@ export default function App() {
             <HomePage />
           </Route>
         </Switch>
-      </div>
+      </div> */}
+      test
     </Router>
   );
 }

@@ -10,7 +10,7 @@ function Callback() {
 
 
    useEffect(() => {
-      // parse token from hash, which we got from spotify redirect uri. And store token into localstorage.
+      // parse token from hash, which we got from spotify redirect uri. And store token into localstorages.
       const parsedHash = qs.parse(window.location.hash);
 
       // if we get token, save into localstorage
